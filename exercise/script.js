@@ -3,26 +3,44 @@ const dataForm = document.getElementById("dataForm");
 const dataList = document.getElementById("dataList");
 const resetButton = document.getElementById("resetButton");
 
-// todo: implement an event listener that adds the values of the
-// form field to the DOM and stores data as json in local storage
 dataForm.addEventListener("submit", (event) => {
     event.preventDefault();
+
+    const name = document.getElementById("nameInput").value;
+    const age = document.getElementById("ageInput").value;
+
+    const data = { name: name, age: age };
+
+    // show new dataset in html
+    addDataToList(data);
+
+    // store new dataset in local storage
+
+    // fetch the existing data array from localstorage or create new empty array
+    let storedData = JSON.parse(localStorage.getItem("formData")) || [];
+    // add new dataset to the array
+    storedData.push(data);
+    // store the changed dataset to local storage
+    localStorage.setItem("formData", JSON.stringify(storedData));
 });
 
-// todo: implement an function that creates a new line in the 
-// datalist of the html page
+// function to add new line to html list
 function addDataToList(data) {
     const listItem = document.createElement("li");
     listItem.textContent = `${data.name} (${data.age} Jahre)`;
     dataList.appendChild(listItem);
 }
 
-// todo: implement the event listener that initially populates
-// the data list with data from local storage
+// load the content of local storage on document load
 window.addEventListener("DOMContentLoaded", () => {
+    console.debug("Seite geladen. Daten aus Local Storage werden geladen...");
+    const storedData = JSON.parse(localStorage.getItem("formData")) || [];
+    storedData.forEach((item) => {
+        addDataToList(item);
+    });
 });
 
-// todo: implement an event listener that emties the data in in the
-// html page and resets data in local storage
 resetButton.addEventListener( "click", () => {
+    dataList.innerHTML = "";
+    localStorage.removeItem("formData");
 });
