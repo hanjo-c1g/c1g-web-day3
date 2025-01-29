@@ -39,7 +39,8 @@ Grundsätzlich solltest du mir dem gelernten JavaScript, CSS und HTML Kenntnisse
 - Um die Daten beim Neustart zu laden benötigst du einen Eventlistener: **`window.addEventListener("DOMContentLoaded", () => {});`**
 - Achte darauf, die Daten immer in JSON-Format zu speichern und beim Laden aus dem Local Storage wieder zu parsen.
 - Debugge deine Lösung mit **`console.debug()`**, um Abläufe nachzuvollziehen.
-- Nutze auch andere Funktionien wie den Local Storage Viewer in den Entwicklertools
+- Nutze auch andere Funktionien wie den Local Storage Viewer in den Entwicklertools.
+- Du kannst die Übungen gern wieder in einem CodePen durchführen oder du lädst dir das GitHub Repo auf deinen Rechner.
 
 ---
 
