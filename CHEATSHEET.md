@@ -27,7 +27,7 @@ paginate: true
   - Plattformunabhängig.
   - Unterstützt von nahezu allen Programmiersprachen.
 - **Anwendungsbeispiele:**
-  - API-Daten (z. B. Wetterdaten).
+  - API-Daten.
   - Konfigurationsdateien.
 
 ---
