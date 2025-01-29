@@ -1,10 +1,6 @@
 ---
 marp: true
-theme: default
-class: lead
 paginate: true
-backgroundColor: #f8f8f8
-color: #333
 ---
 
 # Tag 3: JSON und Local Storage
